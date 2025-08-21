@@ -1,22 +1,35 @@
-<nav class="navbar fixed-top navbar-dark navbar-expand-lg p-md-3" appNavbarScrolly>
+ <nav class="navbar fixed-top navbar-dark navbar-expand-lg p-md-3" appNavbarScrolly>
   <div class="container">
-    <a class="navbar-brand" routerLink="/">
-      <img class="img_logo" src="/assets/img/logoInmo-web-Negro-139-80.png" alt="logo-devillainmobiliaria">
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-      <div class="mx-auto"></div>
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
-        <li class="nav-item">
-          <a class="nav-link active" aria-current="page" [routerLink]="[ '/' ]">PROYECTOS</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" [routerLink]="[ '/contacto' ]">CONTACTO</a>
-        </li>
-      </ul>
-    </div>
+      <a class="navbar-brand" routerLink="/">
+        <img class="img_logo" src="/assets/img/logo_cmiac.png" alt="logo-devillainmobiliaria">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <div class="mx-auto"></div>
+        <div id="main">
+          <ul class="navbar-nav me-auto mb-2 mb-lg-0" >
+                <li class="nav-item"></li>
+                <li class="nav-item active">
+                    <a  id="propiedades" class="nav-link active"  [routerLink]="[ '/' ]" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">INICIO</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="quienres-somos" class="nav-link" [routerLink]="[ '/quienes-somos' ]" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">¿QUIÉNES SOMOS?</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="quienres-somos" class="nav-link" [routerLink]="[ '#' ]" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">SERVICIOS</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="contacto" class="nav-link" [routerLink]="[ '#' ]" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">INVESTIGACIÓN</a>
+                </li>
+                <li class="nav-item">
+                    <a  id="contacto" class="nav-link" [routerLink]="[ '/contacto' ]" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">CONTACTO</a>
+                </li>
+                 
+            </ul>
+        </div>
+
+      </div>
   </div>
 </nav>
-

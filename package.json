@@ -7,7 +7,12 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "build-prod": "ng build --configuration production"
+    "build-prod": "ng build --configuration production",
+    "explore": "source-map-explorer dist/**/*.js",
+    "dev:ssr": "ng run inmo.devilla:serve-ssr",
+    "serve:ssr": "node dist/inmo.devilla/server/main.js",
+    "build:ssr": "ng build && ng run inmo.devilla:server",
+    "prerender": "ng run inmo.devilla:prerender"
   },
   "private": true,
   "dependencies": {
@@ -18,25 +23,34 @@
     "@angular/forms": "^15.2.0",
     "@angular/platform-browser": "^15.2.0",
     "@angular/platform-browser-dynamic": "^15.2.0",
+    "@angular/platform-server": "^15.2.0",
     "@angular/router": "^15.2.0",
+    "@nguniversal/express-engine": "^15.2.1",
     "aos": "^2.3.4",
     "bootstrap-icons": "^1.10.5",
+    "express": "^4.15.2",
     "rxjs": "~7.8.0",
+    "serverless": "^3.33.0",
+    "tailwindcss": "^3.4.17",
     "tslib": "^2.3.0",
     "zone.js": "~0.12.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "^15.2.6",
-    "@angular/cli": "~15.2.6",
-    "@angular/compiler-cli": "^15.2.0",
+    "@angular-devkit/build-angular": "^15.2.9",
+    "@angular/cli": "^20.1.6",
+    "@angular/compiler-cli": "^15.2.9",
+    "@nguniversal/builders": "^15.2.1",
     "@types/aos": "^3.0.4",
+    "@types/express": "^4.17.0",
     "@types/jasmine": "~4.3.0",
+    "@types/node": "^20.4.2",
     "jasmine-core": "~4.5.0",
     "karma": "~6.4.0",
     "karma-chrome-launcher": "~3.1.0",
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.0.0",
+    "source-map-explorer": "^2.5.3",
     "typescript": "~4.9.4"
   }
 }

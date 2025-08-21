@@ -1,10 +1,11 @@
-<section class="main-banner">
+<div *ngFor="let propidad of propiedades">
+<section class="main-banner" >
   <div class="container">
     <div class="content-wrapper">
       <h1 class="global__title-proyecto white mb-4">Vive en el centro de la ciudad</h1>
     </div>
   </div>
-  <img width="1280" height="767" src="/assets/img/cards-casas/casa-lara/cuarto-grande-slide1.JPEG"
+  <img width="1280" height="767" src="{{propidad.descripcion1.imgPrincipal}}"
     class="img-banner d-none d-md-block" alt="casa-lara" sizes="(max-width: 1280px) 100vw, 1280px">
 </section>
 
@@ -20,7 +21,7 @@
                   <i class="card-cont-icons fa-solid fa-location-dot fa-2xl"></i>
                 </div>
                 <div class="text">
-                  <p class="medium"> Jr. Lara Cuadra 10</p>
+                  <p class="medium"> {{propidad.descripcion1.direccion}}</p>
                 </div>
               </div>
             </div>
@@ -37,7 +38,7 @@
                     Área
                   </p>
                   <p class="big">
-                    121m²
+                    {{propidad.descripcion1.area}}
                   </p>
                 </div>
               </div>
@@ -55,7 +56,7 @@
                     Dormitorios
                   </p>
                   <p class="big">
-                    7
+                    {{propidad.descripcion1.dormitorios}}
                   </p>
                 </div>
               </div>
@@ -73,7 +74,7 @@
                     Precio
                   </p>
                   <p class="big">
-                    S/650 mil
+                    {{propidad.descripcion1.precio}}
                   </p>
                 </div>
               </div>
@@ -262,3 +263,4 @@
         </div>
 </section>
 
+</div>

@@ -1,43 +1,69 @@
  .carousel-item {
-  height: 100vh;
-  min-height: 300px;
+   height: 90vh;
+   min-height: 300px;
  }
 
  .carousel-caption {
-  bottom: 220px;
+
+   left: 11%;
+   right: auto;
+   bottom: auto;
+   top: 30%;
+   max-width: 40%;
+   text-align: left;
  }
 
- .carousel-caption h5{
- font-size: 3.4rem;
- font-weight: bold;
- text-transform: uppercase;
- line-height: 3.6rem;
- color: var(--just-white);
- margin-top: 25px;
+ .carousel-caption h5 {
+   font-size: 3.1rem;
+   font-weight: 800;
+   font-family: 'Montserrat', sans-serif;
+   line-height: 3.6rem;
+   color: var(--just-white);
+   margin-top: 25px;
+   text-align: left;
+   
 
  }
 
- .carousel-caption p{
-  margin-top: 25px;
-  font-size: 2.4rem;
-  font-weight: 600;
-  line-height: 2.8rem;
+ .carousel-caption p {
+   margin-top: 25px;
+   font-size: 2.4rem;
+   font-family: 'Montserrat', sans-serif;
+   font-weight: 500;
+   line-height: 2.8rem;
+   text-align: left;
+
  }
 
- .w-100 {
-  height: 100vh;
- }
+ .wave-separator{
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:-1px;      /* evita línea blanca */
+  height:72px;     /* alto de la ola */
+  overflow:hidden;
+  line-height:0;
+  z-index:2;
+}
+.wave-separator svg{
+  display:block;
+  width:100%;
+  height:100%;
+}
+
+/*  .w-100 {
+   height: 100vh;
+ } */
+
 
  @media screen and (max-width: 320px) {
-  .carousel-caption{
-    bottom: 0px;
-  }
- }
-
- @media only screen and (max-width: 767px) {
-  .w-100 {
-    width: auto!important;
+   .carousel-caption {
+     bottom: 0px;
    }
  }
 
-
+ @media only screen and (max-width: 767px) {
+   .w-100 {
+     width: auto !important;
+   }
+ }

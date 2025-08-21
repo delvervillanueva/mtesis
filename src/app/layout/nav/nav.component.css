@@ -37,6 +37,12 @@
   padding: 0rem!important;
 }
 
+.img_logo {
+  width: 160px;
+  height: 66px;
+  object-fit: contain;
+}
+
 .nav-link {
   color: rgba(255, 255, 255, 0.75);
   font-size: 1rem;
@@ -66,3 +72,8 @@
 .nav-link:focus::after {
   opacity: 1;
 }
+
+
+
+
+#main > ul > li > a:target { background:red; color:white; }

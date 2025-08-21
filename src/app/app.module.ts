@@ -3,8 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 import { GuardComponent } from './core/guard/guard.component';
-import { InterceptorComponent } from './core/interceptor/interceptor.component';
-
 import { SharedModule } from './shared/shared.module';
 import { LayoutModule } from './layout/layout.module';
 import {HomeModule  } from './modules/home/home.module';
@@ -23,7 +21,7 @@ import { HttpClientModule } from '@angular/common/http';
     GuardComponent,
   ],
   imports: [
-    BrowserModule,
+    BrowserModule.withServerTransition({ appId: 'serverApp' }),
     SharedModule,
     LayoutModule,
     HomeModule,
@@ -35,8 +33,7 @@ import { HttpClientModule } from '@angular/common/http';
   ],
   exports: [
     SharedModule,
-    AppRoutingModule
-
+    ComponentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

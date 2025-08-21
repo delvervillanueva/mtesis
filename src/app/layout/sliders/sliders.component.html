@@ -1,37 +1,51 @@
-<!-- <section class="main-banner">
-  <div class="container"> -->
 
-    <div id="carouselExampleFade" class="carousel slide carousel-fade">
-      <div class="carousel-inner">
-        <div class="carousel-item active">
-          <img src="/assets/img/slider-principal/slider.png" class="d-block w-100" alt="...">
-          <div class="carousel-caption animate__animated animate__fadeInUp animate__delay-1s">
-            <h5>¡Disfruta de vivir bien!</h5>
-            <p>Somos tu aliado para conseguir terrenos y casas que hagan tu vida más fácil. </p>
-            <!-- <p>que esperas</p> -->
-          </div>
-        </div>
-<!--         <div class="carousel-item">
-          <img src="/assets/img/slider-principal/photo2.jpeg" class="d-block w-100" alt="...">
-        </div>
-        <div class="carousel-item">
-          <img src="/assets/img/slider-principal/photo3.jpeg" class="d-block w-100" alt="...">
-        </div> -->
+
+<div id="carouselExampleFade" class="carousel slide carousel-fade"> 
+  <div class="carousel-inner">
+    <div class="carousel-item active position-relative">
+      
+      <!-- Imagen principal de fondo -->
+      <img src="/assets/img/slider-principal/slider_3.jpg" class="d-block w-100" alt="...">
+
+      <!-- Imagen posicionada a la derecha -->
+      <div class="position-absolute" 
+           style="
+             top: 25%;
+             right: 12%;
+             width: 600px;
+             height: 420px;
+             background: url('/assets/img/slider-principal/asesor.png') no-repeat center center;
+             background-size: cover;
+             border-radius: 6px;">
       </div>
-<!--       <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Previous</span>
-      </button>
-      <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-        <span class="visually-hidden">Next</span>
-      </button> -->
+
+      <!-- Texto alineado a la izquierda y limitado en ancho -->
+      <div class="carousel-caption text-start animate__animated animate__fadeInUp animate__delay-1s">
+        <h5 style="line-height: 1.2;">
+          Expertos en asesoría y escritura de tesis profesional
+        </h5>
+        <p style="font-size: 1.7rem; margin-top: 15px;">
+          Desarrolla tu investigación académica con nuestro soporte especializado desde la idea hasta la sustentación.
+        </p>
+      </div>
+       <div class="position-absolute w-100 d-flex justify-content-center" style="bottom: 10%;">
+        <a [routerLink]="[ '/contacto' ]" class="btn btn-outline-light btn-lg px-4 py-2" 
+           style="border-radius: 8px; font-weight: 600;">
+          Contáctanos
+        </a>
+      </div>
+
+<!--       <a  id="contacto" class="nav-link" [routerLink]="[ '/contacto' ]" data-bs-toggle="collapse" data-bs-target=".navbar-collapse.show">CONTACTO</a>
+ -->      
+
+      <div class="wave-separator">
+        <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+          <!-- Cambia el fill por tu azul (#2A368C o el que uses en el header) -->
+          <path d="M0,40 C240,100 480,0 720,40 C960,80 1200,100 1440,40 L1440,120 L0,120 Z"
+                fill="#fff"></path>
+        </svg>
+      </div>
+
     </div>
-<!--
   </div>
-</section> -->
-
-
-<!-- impartar animate css de google -->
-<!-- para colocar a los textos  -->
-<!-- <p style="animation-delay: 1s;"></p> -->
+</div>

@@ -2,10 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="utf-8">
-  <title>Devilla Inmobiliaria</title>
+  <title>Centro Multidisciplinario de Investigación y Asesoría Científica (CMIAC)</title>
+  <meta name="description" content="Devilla Inmobiliaria en Cajabamba - Cajamarca, te ayudamos a vender tu casa, departamento o lote, de manera rápida y segura." />
+  <meta name="keywords" content="Inmobiliaria Cajabamba, casas Cajabamba, lotes cajabamba">
+	<meta name="robots" content="index, follow" />
+	<meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+	<meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+  <meta name="title" content="Centro Multidisciplinario de Investigación y Asesoría Científica (CMIAC)">
+  <meta name="language" content="Spanish">
+
+  <meta name="google-site-verification" content="O67JD77BRakbE3reEGLRtAEw6NXICfEYIaUfXKPTqZs" />
+
+   <!-- Facebook Meta Tags -->
+   <meta property="og:url" content="https://devillainmobiliaria.com/">
+   <meta property="og:type" content="website">
+   <meta property="og:title" content="Centro Multidisciplinario de Investigación y Asesoría Científica (CMIAC)">
+   <meta property="og:description" content="Devilla Inmobiliaria en Cajabamba - Cajamarca, te ayudamos a vender tu casa, departamento o lote, de manera rápida y segura.">
+
+   <!-- Twitter Meta Tags -->
+   <meta name="twitter:card" content="summary_large_image">
+   <meta property="twitter:domain" content="devillainmobiliaria.com">
+   <meta property="twitter:url" content="https://devillainmobiliaria.com/">
+   <meta name="twitter:title" content="Centro Multidisciplinario de Investigación y Asesoría Científica (CMIAC)">
+   <meta name="twitter:description" content="Devilla Inmobiliaria en Cajabamba - Cajamarca, te ayudamos a vender tu casa, departamento o lote, de manera rápida y segura.">
+
+
   <base href="/">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="icon" type="image/x-icon" href="favicon.ico">
+
+  <link rel="canonical" href="https://www.devillainmobiliaria.com/"/>
+  <link rel="icon" type="image/x-icon" href="/assets/img/icon/logo_tesis_128x128.png">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
@@ -17,6 +43,10 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 </script>
+
+
+
+
 </head>
 <body>
 
@@ -29,15 +59,32 @@
 <!--   Google fonts Fin  -->
 
 
-<!-- icono de wsp Inicio -->
-  <a href="https://api.whatsapp.com/send?phone=51945824225&text=Hola%20quisiera%20m%C3%A1s%20informaci%C3%B3n%20de%20sus%20servicios."
-      class="float" target="_blank">
+  <!-- icono de wsp Inicio -->
+  <a href="https://api.whatsapp.com/send?phone=51917307238&text=Hola%2C%20equipo%20de%20SysWeb3.%20Me%20gustar%C3%ADa%20recibir%20m%C3%A1s%20informaci%C3%B3n%20sobre%20sus%20servicios."
+  class="float" target="_blank">
+ <div id="tooltip" class="tooltip-wrapper">
+   <span class="tooltip-bubble" id="tooltiptext">¿Necesitas ayuda?</span>
+   <i class="fa fa-whatsapp my-float" aria-hidden="true"></i>
+ </div>
+</a>
 
-      <div id="tooltip">
-        <span id="tooltiptext"> Escríbenos </span>
-        <i class="fa fa-whatsapp my-float"></i>
-      </div>
-  </a>
+<script>
+  window.addEventListener('DOMContentLoaded', () => {
+    const tooltipText = document.getElementById('tooltiptext');
+
+    // Mostrar después de 5s
+    setTimeout(() => {
+      tooltipText.style.visibility = 'visible';
+      tooltipText.style.opacity = '1';
+
+      // Ocultar después de otros 5s
+      setTimeout(() => {
+        tooltipText.style.opacity = '0';
+        tooltipText.style.visibility = 'hidden';
+      }, 5000);
+    }, 5000);
+  });
+</script>
 <!-- icono de wsp Fin -->
 
   <div class="content">
@@ -45,5 +92,9 @@
   </div>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
+
+
+
+
 </body>
 </html>
