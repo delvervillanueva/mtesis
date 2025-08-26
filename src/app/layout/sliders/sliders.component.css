@@ -66,4 +66,99 @@
    .w-100 {
      width: auto !important;
    }
+
+
+   
  }
+
+ @media (max-width: 768px){
+ .position-absolute {
+  position: absolute;
+    right: 0%;
+   }
+}
+
+@media (max-width: 576px){
+.position-absolute{
+  position: absolute;
+
+    right: 0%;
+    margin-right: 130px;
+    margin-bottom: 50px;
+   }
+}
+
+
+/* ===== Escritorio / tablet ===== */
+/* .hero-photo {
+  top: 25%;
+  right: 12%;
+  width: 600px;
+  height: 420px;
+  background: url('/assets/img/slider-principal/asesor.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 6px;
+  box-shadow: 0 12px 26px rgba(0,0,0,.25);
+}
+ */
+/* ===== Móvil: centrada y responsive ===== */
+@media (max-width: 576px) {
+  /* Opción A (recomendada): sácala del absoluto para que fluya y se centre */
+  .hero-photo {
+   
+    width: min(100vw, 520px) !important;/* ocupa el 88% del ancho, con tope */
+    height: auto !important;
+    aspect-ratio: 3 / 2;               /* mantiene proporción */
+    margin: -5rem auto 0;               /* centrada */
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    margin-right: -52px;
+  }
+
+ .carousel-caption h5 {
+   font-size: 2.5rem;
+   font-weight: 800;
+   font-family: 'Montserrat', sans-serif;
+   line-height: 3.6rem;
+   color: var(--just-white);
+   margin-top: 25px;
+   text-align: left;
+   
+
+ }
+
+  .carousel-caption {
+   max-width: none;
+
+ }
+
+
+ 
+}
+
+
+.hero-photo {
+  position: relative; /* importante para que ::after se posicione dentro */
+  background: url('/assets/img/slider-principal/asesor.png') no-repeat center center;
+  background-size: cover;
+  border-radius: 6px;
+  overflow: hidden; /* asegura que el overlay respete el borde redondeado */
+}
+
+/* Overlay */
+.hero-photo::after {
+  content: "";
+  position: absolute;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  background: rgba(0,0,0,0.4); /* negro con opacidad */
+  border-radius: inherit;
+  pointer-events: none; /* no bloquea clics */
+}
+
+/* Solo en móviles */
+@media (max-width: 576px) {
+  .hero-photo::after {
+    background: rgba(0,0,0,0.55); /* más oscuro en pantallas pequeñas */
+  }
+}

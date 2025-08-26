@@ -1,52 +1,88 @@
-<section class="main-banner" style="background-image: url(/assets/img/contacto/contacto.png);">
+<section class="main-banner"  style="background-image: url(/assets/img/contacto/book.jpg);">
   <div class="container">
-    <!-- <div class="b22-img">
-      <img src="assets/img/contacto/ibi-trasparente.png" width="482" height="635" title="b22 imgleft 482x635"
-        alt="b22 imgleft 482x635" data-lazy-src="assets/img/contacto/ibi-trasparente.png" data-ll-status="loaded"
-        class="entered lazyloaded">
-    </div> -->
-    <div class="b22-form">
-      <div id="form-contact" style="margin: 0px;" class="super-form">
-        <form [formGroup]="formLogin" (submit)="send()">
-          <div class="block-title">
-            <div class="block-title-content">
-              <h3 class="title-contact">
-                ¡Escríbenos y te
-                <strong>contactaremos!</strong>
-              </h3>
-            </div>
+    <div class="form-card shadow-sm rounded-4 p-4 p-md-5">
+      <!-- Título -->
+      <h1 class="display-5 fw-bold mb-3 form-title">Envíanos un mensaje</h1>
+      <p class="lead text-muted mb-4">
+        Completa el formulario y nos pondremos en contacto contigo lo antes posible.
+      </p>
 
-          </div>
-          <div class="col-12">
-            <label for="inputAddress" class="form-label">NOMBRES y APELLIDOS</label>
-            <input type="text" class="form-control" id="name" placeholder="" formControlName="name">
-          </div>
-          <div class="col-md-6">
-            <label for="inputEmail4" class="form-label">EMAIL</label>
-            <input type="email" class="form-control" id="email" formControlName="email">
-          </div>
-      <!--     <div class="col-md-6">
-            <label for="inputPassword4" class="form-label">TELÉFONO / CELULAR</label>
-            <input type="password" class="form-control" id="inputPassword4">
-          </div> -->
+      <form novalidate>
+        <!-- Nombre -->
+        <div class="mb-4">
+          <label for="nombre" class="form-label form-label-lg">Nombre completo*</label>
+          <input
+            id="nombre"
+            type="text"
+            class="form-control form-control-lg soft-input"
+            placeholder="Tu nombre"
+          />
+        </div>
 
-          <div class="col-12">
-            <label for="inputAddress2" class="form-label">MENSAJE</label>
-            <input type="text" class="form-control" id="message" placeholder="" formControlName="message">
+        <!-- Teléfono -->
+        <div class="mb-4">
+          <label for="telefono" class="form-label form-label-lg">Teléfono*</label>
+          <input
+            id="telefono"
+            type="tel"
+            class="form-control form-control-lg soft-input"
+            placeholder=""
+          />
+        </div>
+
+        <!-- Email -->
+        <div class="mb-4">
+          <label for="email" class="form-label form-label-lg">Correo electrónico*</label>
+          <input
+            id="email"
+            type="email"
+            class="form-control form-control-lg soft-input"
+            placeholder="ejemplo@gmail.com"
+          />
+        </div>
+
+        <!-- Servicio -->
+        <div class="mb-4">
+          <label for="servicio" class="form-label form-label-lg">Servicio</label>
+          <div class="position-relative">
+            <select
+              id="servicio"
+              class="form-select form-select-lg soft-input pe-5"
+              aria-label="Selecciona un servicio"
+            >
+              <option selected>Selecciona un servicio</option>
+              <option value="1">Asesoría de tesis</option>
+              <option value="2">Corrección de estilo</option>
+              <option value="3">Análisis estadístico</option>
+            </select>
+            <!-- Flecha (opcional) -->
+            <span class="select-caret d-none d-sm-inline">&#x25BE;</span>
           </div>
+        </div>
 
-          <div class="col-12 my-3">
-            <button type="submit" class="btn btn-primary">ENVIAR</button>
-          </div>
-        </form>
+        <!-- Mensaje -->
+        <div class="mb-2">
+          <label for="mensaje" class="form-label form-label-lg">Mensaje</label>
+          <textarea
+            id="mensaje"
+            rows="5"
+            class="form-control form-control-lg soft-input"
+            placeholder="Describe brevemente tu proyecto..."
+          ></textarea>
+        </div>
 
-      </div>
+        <div class="mb-4 small text-muted">500 caracteres disponibles</div>
 
-     <!--  <div>
-        Valido: {{formLogin.valid | json}}
-      </div>
- -->
+        <!-- Botón -->
+        <div class="d-grid">
+          <button type="button" class="btn btn-lg btn-primary form-btn">
+            Enviar
+          </button>
+        </div>
+      </form>
     </div>
   </div>
 </section>
+
+
 
