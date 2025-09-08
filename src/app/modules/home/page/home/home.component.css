@@ -1,60 +1,57 @@
- :root{
-    --brand: #0A3D62;         /* azul principal */
-    --accent: #2EC4D3;        /* celeste para subrayado */
-    --card-border: #CFE3EE;   /* borde claro */
-  }
+/* NO edites utilidades globales (py-5, container, etc.) fuera del wrapper */
+.home-services {
+  /* variables locales de este bloque */
+  --brand: #0A3D62;
+  --accent: #2EC4D3;
+  --card-border: #CFE3EE;
+}
 
-  .py-5 {
-    padding-top: 8rem !important;
-    padding-bottom: 3rem !important;
-  }
-  .service-container { max-width: 1220px; }
+.home-services .service-container { max-width: 1220px; }
 
-  .service-heading{
-    color:#0A3D62;
-    letter-spacing:.5px;
-  }
+.home-services .service-heading {
+  color: var(--brand);
+  letter-spacing: .5px;
+}
 
-  .service-underline{
-    width: 96px;
-    height: 6px;
-    border-radius: 999px;
-    background: var(--accent);
-  }
+.home-services .service-underline {
+  width: 96px;
+  height: 6px;
+  border-radius: 999px;
+  background: var(--accent);
+}
 
-  .service-card{
-    background: #fff;
-    border: 2px solid var(--card-border);
-    border-radius: 16px;
-    padding: 28px;
-    transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease;
-  }
-  .service-card:hover{
-    border-color: #A9CEDF;
-    box-shadow: 0 10px 28px rgba(10,61,98,0.08);
-    transform: translateY(-2px);
-  }
+.home-services .service-card {
+  background: #fff;
+  border: 2px solid var(--card-border);
+  border-radius: 16px;
+  padding: 28px;
+  transition: border-color .2s ease, box-shadow .2s ease, transform .15s ease;
+}
+.home-services .service-card:hover {
+  border-color: #A9CEDF;
+  box-shadow: 0 10px 28px rgba(10,61,98,.08);
+  transform: translateY(-2px);
+}
 
-  .service-title{
-    font-weight: 800;
-    color: #16324C;
-  }
+.home-services .service-title {
+  font-weight: 800;
+  color: #16324C;
+}
 
-    p {
+/* Solo los <p> dentro de Home */
+.home-services p { color: #0A3D62; }
 
-    color: #0A3D62;
-  }
+.home-services .icon-wrap {
+  width: 58px; height: 58px;
+  border: 2px solid var(--accent);
+  color: var(--accent);
+  border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  margin-bottom: 14px;
+}
 
-  .icon-wrap{
-    width: 58px; height: 58px;
-    border: 2px solid var(--accent);
-    color: var(--accent);
-    border-radius: 12px;
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom: 14px;
-  }
 
-  /* Responsivo fino */
-  @media (max-width: 991.98px){
-    .service-heading{ font-size: 2.1rem; }
-  }
+/* Responsivo fino */
+@media (max-width: 991.98px) {
+  .home-services .service-heading { font-size: 2.1rem; }
+}

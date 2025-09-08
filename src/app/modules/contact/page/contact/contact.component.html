@@ -7,42 +7,50 @@
         Completa el formulario y nos pondremos en contacto contigo lo antes posible.
       </p>
 
-      <form novalidate>
-        <!-- Nombre -->
+      <form (ngSubmit)="enviarFormulario()" #miFormulario="ngForm" novalidate>
         <div class="mb-4">
           <label for="nombre" class="form-label form-label-lg">Nombre completo*</label>
           <input
-            id="nombre"
             type="text"
+            name="name"
+            [(ngModel)]="formData.name"
+            required
+            #name="ngModel"
+            placeholder="Nombre"
             class="form-control form-control-lg soft-input"
-            placeholder="Tu nombre"
           />
+          <p *ngIf="name.invalid && name.touched" class="text-red-500 text-sm mt-1">Este campo es obligatorio.</p>
         </div>
-
-        <!-- Teléfono -->
         <div class="mb-4">
-          <label for="telefono" class="form-label form-label-lg">Teléfono*</label>
+          <label for="phone" class="form-label form-label-lg">Teléfono*</label>
           <input
-            id="telefono"
-            type="tel"
+            type="text"
+            name="phone"
+            [(ngModel)]="formData.phone"
+            required
+            #phone="ngModel"
+            placeholder="Teléfono"
             class="form-control form-control-lg soft-input"
-            placeholder=""
           />
-        </div>
+          <p *ngIf="phone.invalid && phone.touched" class="text-red-500 text-sm mt-1">Este campo es obligatorio.</p>
 
-        <!-- Email -->
+        </div>
         <div class="mb-4">
           <label for="email" class="form-label form-label-lg">Correo electrónico*</label>
           <input
-            id="email"
             type="email"
+            name="email"
+            [(ngModel)]="formData.email"
+            required
+            #email="ngModel"
+            placeholder="tucorreo@mail.com"
             class="form-control form-control-lg soft-input"
-            placeholder="ejemplo@gmail.com"
           />
+          <p *ngIf="email.invalid && email.touched" class="text-red-500 text-sm mt-1">Este campo es obligatorio.</p>
         </div>
 
-        <!-- Servicio -->
-        <div class="mb-4">
+      
+     <!--    <div class="mb-4">
           <label for="servicio" class="form-label form-label-lg">Servicio</label>
           <div class="position-relative">
             <select
@@ -55,19 +63,22 @@
               <option value="2">Corrección de estilo</option>
               <option value="3">Análisis estadístico</option>
             </select>
-            <!-- Flecha (opcional) -->
+
             <span class="select-caret d-none d-sm-inline">&#x25BE;</span>
           </div>
-        </div>
+        </div> -->
 
         <!-- Mensaje -->
         <div class="mb-2">
-          <label for="mensaje" class="form-label form-label-lg">Mensaje</label>
+          <label for="message" class="form-label form-label-lg">Mensaje</label>
           <textarea
-            id="mensaje"
-            rows="5"
+            type="message"
+            name="message"
+            [(ngModel)]="formData.message"
+            required
+            #message="ngModel"
+            placeholder="Escriba su mensaje aquí..."
             class="form-control form-control-lg soft-input"
-            placeholder="Describe brevemente tu proyecto..."
           ></textarea>
         </div>
 
@@ -75,11 +86,16 @@
 
         <!-- Botón -->
         <div class="d-grid">
-          <button type="button" class="btn btn-lg btn-primary form-btn">
+          <button type="submit" class="btn btn-lg btn-primary form-btn">
             Enviar
           </button>
         </div>
       </form>
+        <div
+          *ngIf="showSuccessMessage"
+          class="text-bgCeleste text-center mt-4 animate-fade-in">
+          ¡Gracias por tu mensaje! Lo hemos recibido correctamente y te responderemos a la brevedad.
+        </div>
     </div>
   </div>
 </section>

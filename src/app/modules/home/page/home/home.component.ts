@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class HomeComponent {
 
-  fotoPortadaCasaLara = '/assets/img/cards-casas/casa-lara/lara2.jpg';
+
 }
