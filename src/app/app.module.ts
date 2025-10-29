@@ -11,7 +11,7 @@ import { AppRoutingModule  } from './app-routing.module';
 
 import { RouterModule } from '@angular/router';
 import { ContactModule } from './modules/contact/contact.module';
-import { ComponentsModule } from './modules/components/components.module';
+
 
 import { HttpClientModule } from '@angular/common/http';
 
@@ -28,12 +28,11 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
     RouterModule,
     ContactModule,
-    ComponentsModule,
+
     HttpClientModule
   ],
   exports: [
-    SharedModule,
-    ComponentsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
